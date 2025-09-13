@@ -15,7 +15,6 @@ class HomePage extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <div class="container">
       <h1>Poker Planning</h1>
-      <span class="subtitle">Estimativas ágeis e colaborativas para sua equipe</span>
       <div class="form">
         <h3>Criar Sala de Poker</h3>
         <div>

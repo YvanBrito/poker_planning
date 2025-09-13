@@ -11,11 +11,6 @@ h1 {
   margin-bottom: 0;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  color: hsl(347.4, 24.7%, 35.1%);
-}
-
 .form {
   display: flex;
   flex-direction: column;
