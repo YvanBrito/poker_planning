@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  planning_poker:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./static:/app/static:ro
+    restart: unless-stopped
