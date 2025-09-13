@@ -9,5 +9,5 @@ roomUsernamestore.subscribe((state) => {
   if (state.roomName !== '')
     document.getElementById('app').innerHTML = '<poker-page></poker-page>'
 })
-
+//document.getElementById('app').innerHTML = '<poker-page></poker-page>'
 document.getElementById('app').innerHTML = '<home-page></home-page>'

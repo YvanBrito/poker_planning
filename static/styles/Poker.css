@@ -1,0 +1,133 @@
+.wrapper {
+  width: 70vw;
+  margin: auto;
+}
+
+.container {
+  padding: 1rem 2rem;
+  background-color: white;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.room-info h2 {
+  margin: 0 0 .5rem 0;
+}
+
+.room-info p {
+  margin: 0;
+  color: hsl(347.4, 24.7%, 35.1%);
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: hsl(355, 85%, 65%);
+  border: 2px solid hsl(355, 85%, 65%);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: hsl(355, 85%, 65%);
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container.middle {
+  height: 200px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 1400px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+}
+
+.estimation-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.estimateBtn {
+  width: 4rem;
+  height: 6rem;
+  font-size: 1.5rem;
+  background-color: white;
+  color: hsl(355, 85%, 65%);
+  border: 2px solid hsla(355, 85%, 65%, 0.356);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.estimateBtn:hover:not(.selected) {
+  box-shadow: 0 0 24px 12px #ffb3c6;
+  border: 2px solid hsl(353, 77.8%, 52.4%);
+  color: hsl(353, 77.8%, 52.4%);
+  transform: scale(1.1);
+  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.estimateBtn.selected {
+  background-color: hsl(353, 77.8%, 52.4%);
+  color: white;
+  border: 2px solid hsl(353, 77.8%, 52.4%);
+  transform: scale(1.1);
+}
+
+#membersList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.member {
+  border: 1px solid hsla(355, 85%, 65%, 0.356);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.member .avatar {
+  background-color: #f7e2e4;
+  color: hsl(355, 86%, 62%);
+  border: 2px solid #f7b9c0;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: hsl(355, 86%, 62%);
+}

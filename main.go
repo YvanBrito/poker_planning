@@ -96,7 +96,7 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 				}
 			}
 			room.Unlock()
-			broadcast(room)
+			broadcast(room, "init")
 			break
 		}
 
@@ -125,16 +125,17 @@ func processMessage(room *Room, conn *websocket.Conn, msg Message) {
 		log.Printf("Room %s reset", room.Name)
 	}
 
-	broadcast(room)
+	broadcast(room, msg.Type)
 }
 
 // Envia o estado atual da sala para todos os membros
-func broadcast(room *Room) {
+func broadcast(room *Room, msgType string) {
 	// Cria uma estrutura de dados para o cliente
 	clientState := map[string]interface{}{
-		"estimates": room.Estimates,
-		"revealed":  room.Revealed,
-		"members":   []string{},
+		"estimates":   room.Estimates,
+		"revealed":    room.Revealed,
+		"members":     []string{},
+		"messageType": msgType,
 	}
 	for name := range room.Members {
 		clientState["members"] = append(clientState["members"].([]string), name)
@@ -144,12 +145,8 @@ func broadcast(room *Room) {
 		if !room.Revealed {
 			// Esconde a estimativa dos outros até que sejam reveladas
 			hiddenEstimates := make(map[string]string)
-			for member, estimate := range room.Estimates {
-				if member == username {
-					hiddenEstimates[member] = estimate
-				} else {
-					hiddenEstimates[member] = "?"
-				}
+			for member := range room.Estimates {
+				hiddenEstimates[member] = "Votou"
 			}
 			clientState["estimates"] = hiddenEstimates
 		}

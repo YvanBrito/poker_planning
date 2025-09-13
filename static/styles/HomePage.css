@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: hsl(347.4, 24.7%, 35.1%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  gap: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form h3 {
+  margin: 0;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 25rem;
+}
+
+.form label {
+  font-size: .8rem;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: 1px solid hsl(347.4, 24.7%, 85.1%);
+  border-radius: 0.25rem;
+  font-size: .8rem;
+}
+
+.form button {
+  padding: 0.8rem 1.2rem;
+  background-color: hsl(355, 85%, 65%);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.form button:disabled {
+  background-color: hsl(355, 85%, 85%);
+  cursor: not-allowed;
+}
+
+.form button:hover:not(:disabled) {
+  background-color: hsl(355, 85%, 55%);
+}

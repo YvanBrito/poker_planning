@@ -3,21 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+          sans-serif;
+        color: hsl(347.4, 24.7%, 15.1%);
+        background: linear-gradient(180deg, hsl(355 85% 97%), hsl(355 25% 96%));
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
       }
     </style>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/static/main.js"></script>
+    <script type="module" src="/static/js/main.js"></script>
   </body>
 </html>
