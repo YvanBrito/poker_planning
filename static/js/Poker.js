@@ -10,7 +10,7 @@ class Poker extends HTMLElement {
     this.attachShadow({ mode: 'open' })
     this.shadowRoot.adoptedStyleSheets = [sheet]
     this.socket = new WebSocket(
-      `ws://poker-planning-b8bj.onrender.com/ws?room=${
+      `wss://poker-planning-b8bj.onrender.com/ws?room=${
         roomUsernamestore.getState().roomName
       }`,
     )
