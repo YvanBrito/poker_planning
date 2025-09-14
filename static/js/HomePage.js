@@ -14,7 +14,7 @@ class HomePage extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
     <div class="container">
-      <h1>Poker Planning</h1>
+      <h1>Planning Poker</h1>
       <div class="form">
         <h3>Criar Sala de Poker</h3>
         <div>
